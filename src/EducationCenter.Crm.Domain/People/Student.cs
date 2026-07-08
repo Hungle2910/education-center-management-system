@@ -1,3 +1,5 @@
+using EducationCenter.Crm.Domain.Classes;
+
 namespace EducationCenter.Crm.Domain.People;
 
 public sealed class Student
@@ -15,6 +17,9 @@ public sealed class Student
     public DateOnly? DateOfBirth { get; set; }
 
     public string Status { get; set; } = StudentStatuses.Active;
+
+    public Guid? BranchId { get; set; }
+    public Branch? Branch { get; set; }
 
     public DateTime CreatedAtUtc { get; set; }
 

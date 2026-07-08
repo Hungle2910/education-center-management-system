@@ -38,5 +38,10 @@ public sealed class StudentConfiguration : IEntityTypeConfiguration<Student>
 
         builder.Property(student => student.CreatedAtUtc)
             .IsRequired();
+
+        builder.HasOne(student => student.Branch)
+            .WithMany()
+            .HasForeignKey(student => student.BranchId)
+            .OnDelete(DeleteBehavior.SetNull);
     }
 }

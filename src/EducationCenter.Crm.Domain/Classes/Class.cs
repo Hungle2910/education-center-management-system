@@ -22,6 +22,9 @@ public sealed class Class
 
     public int MaxStudents { get; set; }
 
+    public Guid? BranchId { get; set; }
+    public Branch? Branch { get; set; }
+
     public DateTime CreatedAtUtc { get; set; }
 
     public DateTime? UpdatedAtUtc { get; set; }

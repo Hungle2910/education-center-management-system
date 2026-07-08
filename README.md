@@ -93,6 +93,8 @@ erDiagram
     Lead ||--o{ ParentCareLog : tracks
 
     %% Academic Domain
+    Branch ||--o{ SchoolClass : groups
+    Branch ||--o{ Student : registers
     Room ||--o{ SchoolClass : hosts
     Teacher ||--o{ SchoolClass : teaches
     SchoolClass ||--o{ Student : contains
@@ -114,8 +116,19 @@ erDiagram
     SchoolClass ||--o{ TuitionInvoice : charges
     DiscountCode ||--o{ TuitionInvoice : applies
     PaymentSetting ||--o{ TuitionInvoice : references
+    TuitionInvoice ||--o{ InvoiceItem : details
+    TuitionInvoice ||--o{ PaymentTransaction : tracks
 
-    %% Core Entities Fields Definition
+    %% Core Entities Fields Definition (Enterprise Standard)
+    Branch {
+        string Id PK
+        string Name
+        string Address
+        string PhoneNumber
+        datetime CreatedAtUtc
+        datetime UpdatedAtUtc
+        boolean IsDeleted
+    }
     User {
         string Id PK
         string Username
@@ -125,9 +138,12 @@ erDiagram
     }
     Student {
         string Id PK
+        string BranchId FK
         string FullName
         date DateOfBirth
         string Status
+        datetime CreatedAtUtc
+        datetime UpdatedAtUtc
     }
     Parent {
         string Id PK
@@ -137,11 +153,14 @@ erDiagram
     }
     SchoolClass {
         string Id PK
+        string BranchId FK
         string ClassName
         string TeacherId FK
         string RoomId FK
         decimal MonthlyFee
         string Status
+        datetime CreatedAtUtc
+        datetime UpdatedAtUtc
     }
     ScheduleOccurrence {
         string Id PK
@@ -157,6 +176,25 @@ erDiagram
         decimal TotalAmount
         string PaymentStatus
         string QrCodeContent
+        datetime CreatedAtUtc
+        datetime UpdatedAtUtc
+    }
+    InvoiceItem {
+        string Id PK
+        string TuitionInvoiceId FK
+        string Name
+        decimal Amount
+        int Quantity
+        decimal SubTotal
+    }
+    PaymentTransaction {
+        string Id PK
+        string TuitionInvoiceId FK
+        decimal Amount
+        string TransactionCode
+        string PaymentMethod
+        string PayeeName
+        datetime TransactionTimeUtc
     }
 ```
 

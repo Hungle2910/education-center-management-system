@@ -34,5 +34,10 @@ public sealed class ClassConfiguration : IEntityTypeConfiguration<Class>
             .WithMany()
             .HasForeignKey(classRoom => classRoom.TeacherId)
             .OnDelete(DeleteBehavior.SetNull);
+
+        builder.HasOne(classRoom => classRoom.Branch)
+            .WithMany(branch => branch.Classes)
+            .HasForeignKey(classRoom => classRoom.BranchId)
+            .OnDelete(DeleteBehavior.SetNull);
     }
 }

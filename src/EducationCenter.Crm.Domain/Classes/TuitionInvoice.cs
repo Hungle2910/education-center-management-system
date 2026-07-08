@@ -58,6 +58,10 @@ public sealed class TuitionInvoice
 
     public string? OperationHistory { get; set; } // JSON array of audit entries
 
+    // Navigation properties
+    public ICollection<InvoiceItem> Items { get; set; } = new List<InvoiceItem>();
+    public ICollection<PaymentTransaction> Transactions { get; set; } = new List<PaymentTransaction>();
+
     public DateTime CreatedAtUtc { get; set; } = DateTime.UtcNow;
     public DateTime? UpdatedAtUtc { get; set; }
 }

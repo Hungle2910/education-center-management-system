@@ -42,6 +42,9 @@ public sealed class ApplicationDbContext : DbContext
     public DbSet<EducationCenter.Crm.Domain.Classes.Attendance> Attendances => Set<EducationCenter.Crm.Domain.Classes.Attendance>();
     public DbSet<EducationCenter.Crm.Domain.Classes.IndividualMakeup> IndividualMakeups => Set<EducationCenter.Crm.Domain.Classes.IndividualMakeup>();
     public DbSet<EducationCenter.Crm.Domain.Classes.TuitionInvoice> TuitionInvoices => Set<EducationCenter.Crm.Domain.Classes.TuitionInvoice>();
+    public DbSet<InvoiceItem> InvoiceItems => Set<InvoiceItem>();
+    public DbSet<PaymentTransaction> PaymentTransactions => Set<PaymentTransaction>();
+    public DbSet<Branch> Branches => Set<Branch>();
     public DbSet<EducationCenter.Crm.Domain.Settings.DiscountCode> DiscountCodes => Set<EducationCenter.Crm.Domain.Settings.DiscountCode>();
     public DbSet<Lead> Leads => Set<Lead>();
     public DbSet<TrialSession> TrialSessions => Set<TrialSession>();
