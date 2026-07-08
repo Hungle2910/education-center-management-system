@@ -1,11 +1,26 @@
-# Education Center Management System (ECMS)
+<p align="center">
+  <img alt=".NET Core" src="https://img.shields.io/badge/.NET_Core-8.0_/_9.0-512BD4?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img alt="Clean Architecture" src="https://img.shields.io/badge/Clean_Architecture-CQRS-007396?style=for-the-badge&logo=dotnet&logoColor=white" />
+  <img alt="Next.js" src="https://img.shields.io/badge/Next.js-15.0-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
+  <img alt="React" src="https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react&logoColor=111827" />
+  <img alt="SQL Server" src="https://img.shields.io/badge/SQL_Server-2022-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white" />
+  <img alt="VietQR" src="https://img.shields.io/badge/VietQR-Dynamic_QR-blue?style=for-the-badge" />
+  <img alt="Google Calendar" src="https://img.shields.io/badge/Google_Calendar-MCP_Sync-4285F4?style=for-the-badge&logo=googlecalendar&logoColor=white" />
+</p>
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![.NET Version](https://img.shields.io/badge/.NET-8.0%20%7C%209.0-blue)](https://dotnet.microsoft.com/)
-[![Next.js Version](https://img.shields.io/badge/Next.js-15.0-black)](https://nextjs.org/)
-[![React Version](https://img.shields.io/badge/React-19.0-61dafb)](https://react.dev/)
+<h1 align="center">Education Center Management System (ECMS)</h1>
 
-A modern, enterprise-grade Customer Relationship Management (CRM) and Management Information System (MIS) designed specifically for education centers, language schools, and training institutions. Built with a highly scalable **.NET Clean Architecture** backend and a responsive, interactive **Next.js & React** frontend.
+<p align="center">
+  <strong>A modern, enterprise-grade Customer Relationship Management (CRM) and Management Information System (MIS) designed specifically for education centers, language schools, and training institutions. Built with a highly scalable .NET Clean Architecture backend and a responsive, interactive Next.js & React frontend.</strong>
+</p>
+
+<p align="center">
+  <img alt="status" src="https://img.shields.io/badge/status-active-success?style=flat-square" />
+  <img alt="database" src="https://img.shields.io/badge/database-SQL_Server-orange?style=flat-square" />
+  <img alt="payment" src="https://img.shields.io/badge/payment-VietQR_Dynamic-blue?style=flat-square" />
+  <img alt="auth" src="https://img.shields.io/badge/auth-JWT_%26_Role_Based-green?style=flat-square" />
+  <img alt="mcp" src="https://img.shields.io/badge/mcp-Google_Calendar-red?style=flat-square" />
+</p>
 
 ---
 
