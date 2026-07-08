@@ -72,6 +72,7 @@ The project follows the **Clean Architecture** pattern to guarantee maintainabil
 *   **`EducationCenter.Crm.Application`**: CQRS queries/commands (via MediatR), validation logic (FluentValidation), mapping, and interface definitions.
 *   **`EducationCenter.Crm.Infrastructure`**: Database contexts, configurations, migrations, repository patterns, security, and integration services (e.g., Google Calendar, Email notifications).
 *   **`EducationCenter.Crm.Api`**: RESTful API Controllers, middleware, authentication (JWT), and application configuration.
+*   **`EducationCenter.Crm.McpServer`**: Model Context Protocol (MCP) Server implementing JSON-RPC 2.0 stdio transport to expose CRM operations to AI coding agents.
 *   **`frontend`**: Next.js App Router workspace utilizing TypeScript, React hooks, and Tailwind CSS.
 
 ---
@@ -215,6 +216,26 @@ erDiagram
 *   **Language:** TypeScript
 *   **Styles:** TailwindCSS
 *   **Testing:** Vitest
+
+---
+
+## 🤖 Model Context Protocol (MCP) Server
+
+The project includes an **MCP Server** (`EducationCenter.Crm.McpServer`) implemented in C# that runs over standard input/output (`stdio`). This allows AI assistants (like Claude Desktop or Antigravity IDE) to interact directly with the CRM database to query students, check schedules, and inspect attendance records.
+
+### Exposing Tools
+- `list_students`: Queries the student directory.
+- `list_classes`: Fetches all classes.
+- `list_teachers`: Fetches all teachers.
+- `list_schedules`: Fetches class schedules within a specified date range.
+- `get_attendance`: Queries occurrence-based attendance by ID.
+
+### Running & Deploying
+To compile and publish the MCP Server as a standalone executable:
+```bash
+dotnet publish src/EducationCenter.Crm.McpServer/EducationCenter.Crm.McpServer.csproj -c Release -r win-x64 --self-contained
+```
+This generates a compiled binary at `src/EducationCenter.Crm.McpServer/bin/Release/net10.0/win-x64/publish/EducationCenter.Crm.McpServer.exe` which can be registered in your AI client's configuration file (`mcp_config.json` or `claude_desktop_config.json`).
 
 ---
 
