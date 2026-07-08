@@ -9,6 +9,64 @@ A modern, enterprise-grade Customer Relationship Management (CRM) and Management
 
 ---
 
+## 🎯 Project Goals, Audience & Features / Mục tiêu, Đối tượng & Tính năng
+
+### 🇺🇸 English Version
+
+#### 1. Purpose & Goals
+The **Education Center Management System (ECMS)** is built to centralize and automate the complex operational lifecycle of modern educational institutions. It replaces disjointed spreadsheets and manual tracking with a unified data-driven flow, ensuring administrative consistency and operational agility.
+
+#### 2. Key Problems Solved & Target Audience
+*   **For Administrators & Staff (Operations & Finance):**
+    *   *Problem:* Manual tuition calculation, class scheduler conflicts, and tedious teacher payroll preparation.
+    *   *Solution:* Automatic monthly tuition billing, real-time scheduler conflict checks, and automated class-duration-based teacher payroll reports.
+*   **For Teachers (Academic Operations):**
+    *   *Problem:* Clunky paper attendance logs and unscheduled makeup classes leading to confusion.
+    *   *Solution:* A dedicated dashboard for mobile-first attendance, automated tracking of eligible absent students, and streamlined makeup class registration.
+*   **For Parents & Students (Engagement & Finance):**
+    *   *Problem:* Out-of-date schedules and friction in paying tuition.
+    *   *Solution:* Live schedule calendar with realtime notifications and dynamic **VietQR** generation for auto-settled payments.
+*   **For Developers & AI Assistance (Extensibility):**
+    *   *Problem:* Hard-to-query databases for administrators who aren't technical.
+    *   *Solution:* Integrated **Model Context Protocol (MCP)** allowing developers and AI agents to safely query and manage CRM records via natural language commands.
+
+#### 3. Core Features
+*   **Admission & Trial Workflow:** Lead acquisition, consultation profiling, and trial session management.
+*   **Conflict-Free Academic Scheduler:** Automated class occurrence generation, schedule calendar grids, and smart conflict checks.
+*   **Smart Attendance & Makeup System:** Real-time attendance tracking, automatic calculation of absent sessions, and makeup class assignment.
+*   **Automated Finance & VietQR:** Dynamic QR billing with auto-settlement, parent invoicing, and automatic receipt generation.
+*   **Real-time Alerts:** Powered by **SignalR** for instant operational alerts, notifications, and updates.
+
+---
+
+### 🇻🇳 Bản tiếng Việt
+
+#### 1. Mục đích & Mục tiêu dự án
+**Education Center Management System (ECMS)** ra đời nhằm tối ưu hóa và tự động hóa toàn bộ vòng đời vận hành phức tạp của các trung tâm giáo dục, trường ngoại ngữ và các cơ sở đào tạo. Hệ thống thay thế các bảng tính Excel rời rạc bằng một quy trình dữ liệu tập trung, nhất quán, hỗ trợ đắc lực cho công tác quản trị.
+
+#### 2. Vấn đề giải quyết & Đối tượng hướng tới
+*   **Đối với Ban quản lý & Nhân viên (Vận hành & Tài chính):**
+    *   *Vấn đề:* Mất nhiều thời gian tính học phí định kỳ, xếp lịch trùng lặp và tính lương giáo viên thủ công.
+    *   *Giải pháp:* Tự động hóa tính phí hàng tháng, hệ thống kiểm tra xung đột phòng/giáo viên realtime, và lập bảng lương tự động dựa trên số giờ dạy thực tế.
+*   **Đối với Giáo viên (Giảng dạy & Học thuật):**
+    *   *Vấn đề:* Ghi nhận điểm danh bằng sổ tay bất tiện, quản lý học bù không có hệ thống dẫn đến sót học viên.
+    *   *Giải pháp:* Trang điểm danh trực tuyến giao diện mobile-first, tự động lọc danh sách học viên vắng đủ điều kiện học bù, và duyệt lịch học bù tự động.
+*   **Đối với Phụ huynh & Học sinh (Kết nối & Học phí):**
+    *   *Vấn đề:* Khó theo dõi lịch học mới nhất, thủ tục đóng tiền mặt phức tạp.
+    *   *Giải pháp:* Lịch học realtime đồng bộ, nhận thông báo tức thời, và tự động tạo mã **VietQR** kèm số tiền/nội dung động giúp quét mã thanh toán gạch nợ tức thì.
+*   **Đối với Lập trình viên & Trợ lý AI (Mở rộng):**
+    *   *Vấn đề:* Khó khăn trong việc truy vấn nhanh báo cáo vận hành nếu không biết viết SQL.
+    *   *Giải pháp:* Tích hợp cổng giao thức **MCP (Model Context Protocol)** giúp nhà phát triển và trợ lý AI giao tiếp trực tiếp với database để truy vấn/thao tác dữ liệu bằng ngôn ngữ tự nhiên.
+
+#### 3. Các tính năng cốt lõi
+*   **Quản lý tuyển sinh & Học thử:** Tiếp nhận leads, phân loại tư vấn, xếp lịch học thử.
+*   **Xếp lịch học không xung đột:** Tự động tạo chuỗi ca học, kiểm tra tài nguyên lớp/phòng/giáo viên, lịch trực quan.
+*   **Điểm danh & Học bù thông minh:** Ghi nhận chuyên cần, tính số buổi vắng và xử lý quy trình học bù khép kín.
+*   **Tài chính & Thanh toán tự động:** Lập hóa đơn học phí tự động, quét VietQR thanh toán tự gạch nợ.
+*   **Thông báo realtime:** Sử dụng công nghệ **SignalR** gửi thông báo hoạt động tức thời đến đúng đối tượng.
+
+---
+
 ## 🧭 Core Business Workflow
 
 The system is designed not just for simple CRUD operations, but to model the real operational lifecycle of an educational institution:
