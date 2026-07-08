@@ -93,11 +93,11 @@ erDiagram
     Lead ||--o{ ParentCareLog : tracks
 
     %% Academic Domain
-    Room ||--o{ Class : hosts
-    Teacher ||--o{ Class : teaches
-    Class ||--o{ Student : contains
-    Class ||--o{ ClassSchedule : plans
-    Class ||--o{ ScheduleOccurrence : schedules
+    Room ||--o{ SchoolClass : hosts
+    Teacher ||--o{ SchoolClass : teaches
+    SchoolClass ||--o{ Student : contains
+    SchoolClass ||--o{ ClassSchedule : plans
+    SchoolClass ||--o{ ScheduleOccurrence : schedules
     ClassSchedule ||--o{ ScheduleOccurrence : generates
     
     Student ||--o{ StudentParent : links
@@ -111,7 +111,7 @@ erDiagram
 
     %% Financial Domain
     Student ||--o{ TuitionInvoice : pays
-    Class ||--o{ TuitionInvoice : charges
+    SchoolClass ||--o{ TuitionInvoice : charges
     DiscountCode ||--o{ TuitionInvoice : applies
     PaymentSetting ||--o{ TuitionInvoice : references
 
@@ -135,7 +135,7 @@ erDiagram
         string PhoneNumber
         string Email
     }
-    Class {
+    SchoolClass {
         string Id PK
         string ClassName
         string TeacherId FK
